@@ -1,23 +1,23 @@
 import "./styles.scss";
 import React, { useState } from "react";
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
+import Footer from "./components/footer/Footer";
 
 function App() {
+  const [active, setActive] = useState("nav-menu");
+
+  const navToggle = () => {
+    active === "nav-menu"
+      ? setActive("nav-menu nav-active")
+      : setActive("nav-menu");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header active={active} navToggle={navToggle} />
+      <Main />
+      <Footer />
     </div>
   );
 }
