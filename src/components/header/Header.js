@@ -10,7 +10,7 @@ export default function Header({ active, navToggle }) {
       </div>
       <nav className="navBar">
         <div  className={active}>
-          <ul>
+          <ul className="first-ul">
             <li>
               <a href="#">Features</a>
             </li>
@@ -21,7 +21,7 @@ export default function Header({ active, navToggle }) {
               <a href="#">Resources</a>
             </li>
           </ul>
-          <ul>
+          <ul className="second-ul">
             <li>
               <a href="#">Login</a>
             </li>
