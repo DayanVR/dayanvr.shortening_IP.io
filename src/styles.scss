@@ -1,0 +1,553 @@
+/* Weights: 500, 700 */
+
+/* Primary */
+
+$Cyan: hsl(180, 66%, 49%);
+$HoverCyan: hsl(180, 66%, 70%);
+$DarkViolet: hsl(257, 27%, 26%);
+
+/* Secondary */
+
+$Red: hsl(0, 87%, 67%);
+
+/* Neutral */
+
+$Gray: hsl(0, 0%, 75%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+
+* {
+  font-size: 18px;
+}
+.App {
+  overflow: hidden;
+  margin-top: 2rem;
+}
+p {
+  text-align: center;
+  @apply text-[1rem]
+  md:text-[1.4rem]
+  lg:text-[1.5rem];
+  color: $GrayishViolet;
+  margin: 2vh 0 4vh;
+  font-weight: 500;
+}
+button, button[type='submit']  {
+  @apply text-center
+  text-[1.4rem]
+  md:text-[1.6rem]
+  font-bold
+  px-8
+  py-3
+  rounded-full;
+  background-color: $Cyan;
+  color: white;
+}
+button:hover {
+  background-color: $HoverCyan;
+}
+.buttonClicked:hover{
+  background-color: $DarkViolet;
+
+}
+.buttonClicked{
+  background-color: $DarkViolet;
+}
+
+.back {
+  @apply bg-slate-100
+  -mx-5
+  md:-mx-8  
+  lg:-mx-14
+  xl:-mx-24
+  2xl:-mx-44;
+  position: relative;
+  width: 100vw;
+  padding-bottom: 1vh;
+}
+
+/* Header.js styles */
+header {
+  @apply lg:mt-3
+  lg:flex
+  lg:h-[15vh]
+  mx-5
+  md:mx-8
+  lg:mx-14
+  xl:mx-24
+  2xl:mx-44;
+  ept: none;
+}
+.main-head {
+  @apply flex
+  lg:flex-none;
+  justify-content: space-between;
+}
+.logo {
+  @apply w-1/3
+  md:w-1/4
+  lg:w-40
+  lg:h-14
+  lg:self-center;
+  ept: none;
+}
+.bars {
+  @apply max-md:w-7
+  md:w-10
+  lg:hidden;
+  cursor: pointer;
+}
+.navBar {
+  @apply mx-auto
+  lg:mx-0
+  w-full
+  lg:self-center;
+  position: relative;
+}
+
+.nav-menu {
+  margin-top: 20px;
+  @apply max-lg:invisible
+  lg:flex
+  max-lg:hidden
+  justify-between
+  lg:mt-0;
+  ept: none;
+}
+.nav-active {
+  @apply w-11/12
+  md:w-9/12
+  lg:w-full
+  text-[1.5rem]
+  visible
+  rounded-2xl
+  block 
+  h-[47vh]
+  md:h-[42vh];
+  left: 50%;
+  color: white;
+  font-weight: 700;
+  transform: translate(-50%);
+  position: absolute;
+  z-index: 10;
+  background-color: $DarkViolet;
+}
+
+.nav-active > ul:first-child {
+  border-bottom: 1px solid $GrayishViolet;
+  width: 75%;
+}
+
+.first-ul > li,
+.second-ul > li {
+  @apply lg:ml-5
+  lg:mr-0
+  xl:ml-8
+  xl:mr-0;
+  ept: none;
+}
+
+.nav-menu > ul {
+  @apply my-auto
+  text-center
+  lg:self-center
+  flex
+  flex-col
+  lg:flex-row
+  justify-between;
+  ept: none;
+}
+.nav-active > ul {
+  @apply p-4
+  md:p-6
+  m-auto
+  text-center
+  flex
+  flex-col
+  lg:flex-row
+  justify-between;
+  ept: none;
+}
+.nav-menu > ul > li {
+  @apply lg:self-center;
+  ept: none;
+}
+.nav-active > ul > li {
+  @apply py-2
+  lg:py-0;
+  ept: none;
+}
+.nav-menu > ul > li > a:hover {
+  color: $Cyan;
+}
+.nav-menu > ul > li > a {
+  @apply text-[1.5rem]
+  mx-auto;
+  ept: none;
+}
+.sign-Up {
+  @apply w-4/5
+  lg:w-full;
+  ept: none;
+}
+
+/* Main.js styles */
+.main-App {
+  @apply mx-5
+  md:mx-8
+  lg:mx-14
+  xl:mx-24
+  2xl:mx-44;
+  ept: none;
+}
+.section-1 {
+  @apply lg:flex
+  mt-9
+  lg:mt-4
+  
+  justify-center
+  items-center
+  flex-row-reverse;
+  ept: none;
+}
+.workIcon {
+  @apply max-w-[150%]
+  lg:w-[60%]
+  2xl:w-[100%]
+  lg:left-[15%]
+  xl:left-[20%];
+  position: relative;
+}
+
+.main-content {
+  @apply static
+  w-10/12 
+  md:w-8/12 
+  2xl:w-10/12 
+  mx-auto;
+  text-align: -webkit-center;
+}
+
+.info-1 {
+  @apply text-center
+  lg:text-left;
+  margin: 6vh 0;
+}
+.info-1 h1 {
+  @apply text-[2.2rem]
+  md:text-[2.5rem]
+  lg:text-[2.8rem];
+  font-weight: 700;
+  line-height: 115%;
+}
+.info-1 p {
+  text-align: center;
+  @apply lg:text-left
+  lg:text-[1.4rem]
+  xl:text-[1.6rem]
+  2xl:text-[1.8rem];
+  ept: none;
+}
+.section-2 {
+  @apply 2xl:w-9/12 self-center;
+  margin: 4vh 0 1vh;
+  padding: 5vh 0 0;
+}
+.info-2 form{
+  background-size: auto;
+  @apply flex
+  flex-col
+  lg:flex-row
+  justify-between
+  rounded-xl
+  bg-shorten-mobile
+  xl:bg-shorten-desktop
+  h-[23vh]
+  md:h-[20vh]
+  lg:h-[22vh]
+  xl:h-36
+  xl:bg-cover;
+  background-color: $DarkViolet;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  padding: 15px 0;
+}
+.info-2 form > input {
+  @apply text-[1rem]
+  font-medium
+  px-3
+  py-3
+  lg:py-4
+  md:max-lg:py-4
+  w-10/12
+  lg:w-[58%]
+  xl:w-[60%]
+  2xl:w-[68%]
+  leading-none
+  rounded-md;
+  margin: auto;
+}
+.info-2 form > input:placeholder-shown {
+  border: solid $Red;
+}
+.info-2 form > span {
+  @apply italic
+  relative 
+  max-md:mx-6
+  md:mx-10
+  lg:mx-6
+  2xl:mx-11
+  lg:absolute
+  top-0
+  lg:top-36
+  xl:top-[8.6rem]
+  2xl:top-[9.5rem];
+  color: $Red;
+  font-weight: 500;
+  ept: none;
+}
+.info-2 form > button[type='submit'] {
+  @apply rounded-md
+  py-3
+  md:py-4
+  lg:py-4
+  xl:py-5
+  w-10/12
+  lg:w-[28%]
+  xl:w-[30%]
+  2xl:w-[20%]
+  text-[1.2rem]
+  2xl:text-[1.5rem]
+  leading-none;
+  margin: auto;
+}
+.shortLinks {
+  text-align: center;
+  padding: 4vh 0;
+}
+.shortLinks p {
+  margin: 3vh 0 1vh;
+}
+
+.info-3 {
+  @apply 2xl:w-7/12
+  2xl:mx-auto;
+  text-align: center;
+  padding: 1vh 0;
+}
+.info-3 h2 {
+  @apply text-[1.8rem]
+  md:text-[2.3rem];
+  font-weight: 700;
+}
+
+.section-3 {
+  @apply 2xl:w-10/12
+  2xl:mx-auto
+  2xl:mb-24
+  ;
+  text-align: -webkit-center;
+}
+.section-3 span {
+  @apply 2xl:rotate-90
+  2xl:translate-y-[37%];
+  background-color: $Cyan;
+  height: 80vh;
+  position: absolute;
+  width: 10px;
+  bottom: 10%;
+  translate: -50% -10%;
+  z-index: 0;
+}
+.infoIcons {
+  position: relative;
+  background-color: white;
+  text-align: -webkit-center;
+  @apply 2xl:text-left
+  lg:w-9/12
+  2xl:w-[31%]
+  px-[3vh]
+  lg:px-2
+  xl:px-10
+  2xl:px-6
+  py-[5vh]
+  md:py-[4vh]
+  2xl:py-[3vh]
+  ;
+  margin: 10vh 0;
+  border-radius: 10px;
+}
+
+.iconsBack img {
+  position: absolute;
+  z-index: 10;
+  inset: 50%;
+  translate: -50% -50%;
+}
+.iconsBack {
+  @apply absolute 
+  p-10
+  w-fit
+  h-fit
+  inset-2/4
+  -translate-x-2/4
+  2xl:inset-x-20
+  2xl:-translate-x-2/4
+  -translate-y-[237%]
+  md:-translate-y-[207%]
+  lg:-translate-y-[195%]
+  xl:-translate-y-[187%]
+  2xl:-translate-y-[205%];
+  border-radius: 100%;
+  background-color: $DarkViolet;
+}
+
+.infoIcons h3 {
+  padding: 4vh 0 3vh;
+  @apply md:pt-4
+  md:pb-3
+  lg:pt-6
+  lg:pb-5
+  bg-none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.infoIcons p {
+  margin: 0 2vw;
+  @apply md:my-2
+  mx-[2vw]
+  lg:mx-10
+  lg:my-0
+  2xl:mx-0
+  text-[1.07rem]
+  2xl:text-left
+  md:text-[1.15rem];
+  font-weight: 500;
+}
+
+.desktop-view {
+  @apply 2xl:flex
+  2xl:w-full
+  justify-around;
+  ept: none;
+}
+.infoIcons:nth-last-child(2) {
+  @apply 2xl:translate-y-12;
+}
+.infoIcons:nth-last-child(1) {
+  @apply 2xl:translate-y-24;
+}
+
+/* Footer.js styles */
+
+.footer-section {
+  @apply bg-boost-mobile
+  lg:bg-boost-desktop
+  -mx-5
+  md:-mx-8
+  lg:-mx-14
+  xl:-mx-24
+  2xl:-mx-44;
+  text-align: center;
+  background-color: $DarkViolet;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+}
+.footer-section div {
+  @apply text-[1.6rem]
+  md:text-[2.5rem]
+  py-16
+  -mx-5
+  md:-mx-8
+  lg:-mx-14
+  xl:-mx-24
+  2xl:-mx-44;
+  ept: none;
+}
+.footer-section div > * {
+  margin: 15px 0;
+  font-weight: 700;
+  color: white;
+}
+
+footer {
+  @apply py-12
+  -mx-5
+  md:-mx-8
+  lg:-mx-14
+  xl:-mx-24
+  2xl:-mx-44;
+  background-color: $VeryDarkViolet;
+  color: white;
+}
+.footer-container {
+  @apply mx-auto
+  xl:flex
+  xl:flex-row
+  xl:w-10/12
+  2xl:w-8/12
+  justify-between
+  w-max;
+  ept: none;
+}
+.footer-logo > img {
+  min-width: 200px;
+}
+
+.footer-links {
+  @apply xl:flex
+  xl:-mr-32
+  xl:flex-row
+  xl:justify-evenly
+  xl:w-7/12;
+  ept: none;
+}
+.footer-links div > h3 {
+  @apply mx-auto
+  max-w-max
+  text-[1.5rem]
+  md:text-[2rem]
+  xl:text-[1.7rem]
+  pt-8
+  xl:pt-0
+  xl:mx-0
+  pb-2;
+  font-weight: 700;
+}
+.footer-links div > ul > li {
+  @apply text-center
+  xl:text-left
+  cursor-pointer;
+  margin: 10px 0;
+}
+.footer-links div > ul > li > a {
+  @apply text-[1.2rem]
+  md:text-[1.5rem]
+  font-medium;
+  color: $Gray;
+  width: max-content;
+  &:hover {
+    color: $Cyan;
+  }
+}
+
+.footer-social {
+  @apply flex-row
+  justify-between
+  self-center
+  pt-6
+  mr-4
+  xl:pt-0
+  xl:ml-20
+  xl:object-top
+  w-full
+  xl:self-start
+  xl:w-1/5;
+  display: flex;
+}
+.footer-social img {
+  @apply w-8;
+  cursor: pointer;
+}
